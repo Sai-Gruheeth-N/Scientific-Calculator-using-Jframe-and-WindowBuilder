@@ -55,6 +55,7 @@ public class View {
                     if(op == "1/n" | op == "n^2" | op == "n^3" | op == "sin" | op == "cos" | op == "tan" | op == "n!" | op == "sqrt")
                     {
                         input2.setEnabled(false);
+                        input2.setText(null);
                     }
                     if(op == "+" | op == "-" | op == "*" | op == "/" | op == "%" | op == "^")
                     {
@@ -95,10 +96,13 @@ public class View {
 		    rdbtnOff.addActionListener(new ActionListener() {
 			    public void actionPerformed(ActionEvent e) {
                     input1.setEnabled(false);
+                    input1.setText(null);
                     operator.setEnabled(false);
                     input2.setEnabled(false);
+                    input2.setText(null);
                     calcbutton.setEnabled(false);
                     result.setEnabled(false);
+                    result.setText("    ");;
 			    }
 		    });
 		    buttonGroup.add(rdbtnOff);
